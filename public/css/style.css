@@ -1,0 +1,173 @@
+.plus-jakarta-san {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link {
+  color: #222222 !important;
+}
+
+/* footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+}
+
+/* cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+.custom-card {
+  width: 100%;
+  max-width: 20rem;
+  margin-bottom: 2rem;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+
+  object-fit: cover !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-text p {
+  font-weight: 400;
+}
+.listing-link {
+  text-decoration: none;
+}
+
+/* card effect */
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+.add-bttn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+/* EDIT PAGE */
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* show image */
+.show-img {
+  height: 10vh !important;
+}
+
+.btns {
+  display: flex;
+}
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Remove any hard-coded width */
+.custom-card {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Ensure rectangular shape */
+.custom-img {
+  height: 280px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Card Styling */
+.listing-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.listing-card:hover {
+  transform: scale(1.02);
+}
+
+/* Card text spacing */
+.card-body {
+  padding: 0.75rem 1rem !important;
+}
+
+/* Tight padding between cards */
+.row.gx-3 {
+  --bs-gutter-x: 1rem;
+}
+.row.gy-4 {
+  --bs-gutter-y: 1.5rem;
+}
+
+.container-fluid {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+.custom-container {
+  max-width: 1600px;
+}
+/* Make room for expanded navbar in small screens */
+@media (max-width: 767.98px) {
+  .custom-container {
+    padding-top: 11rem; /* Adjust if needed */
+  }
+}
+/* Only sticky on md and up */
+.custom-sticky {
+  position: static; /* default behavior */
+}
+
+@media (min-width: 768px) {
+  .custom-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+  }
+}

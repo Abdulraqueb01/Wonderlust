@@ -1,0 +1,82 @@
+<style>
+  .search-btn {
+    background-color: crimson;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .search-btn:hover {
+    background-color: crimson !important;
+    color: white !important ;
+  }
+  .search-btn i {
+    display: inline;
+    margin-right: 1rem;
+  }
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+  }
+</style>
+
+<nav
+  class="navbar navbar-expand-md bg-body-light border-bottom shadow-sm custom-sticky"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listing">
+      <i class="fa-regular fa-compass"></i>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pt-2 pb-3" id="navbarNavAltMarkup">
+      <div class="navbar-nav flex-column flex-md-row w-100">
+        <!-- Navigation Links -->
+        <div class="d-flex flex-column flex-md-row me-auto">
+          <a class="nav-link" href="/listing">Explore</a>
+          <a class="nav-link" href="/listing/new">Airbnb your home</a>
+        </div>
+
+        <!-- Search -->
+        <form
+          class="d-flex my-2 my-md-0 flex-grow-1 justify-content-md-center"
+          role="search"
+          action="/listing"
+          method="get"
+        >
+          <input
+            class="form-control me-2 search-inp"
+            type="search"
+            placeholder="Search destination"
+            aria-label="Search"
+            name="q"
+            value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>"
+          />
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
+        </form>
+
+        <!-- Auth Links -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-md-end mt-2 mt-md-0"
+        >
+          <% if (!currUser) { %>
+          <a class="nav-link" href="/SignUp"><b>Sign Up</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
+          <% } else { %>
+          <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

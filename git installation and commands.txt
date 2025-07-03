@@ -1,0 +1,51 @@
+CONFIGURE GIT
+
+git config --global user.name "My name"
+git config --glonal user.email "your mail"
+
+
+now go to vs code
+clone-used to clone a repository to local machine from git
+git clone < link>
+
+ls -a  used to show the status of  all file
+
+git status gives the status of files 
+
+
+git add filename - it will add new file to  the git staging area
+git add .-it will add all the files to git staging area
+
+git commit -m 'message' it isthe record of change
+
+
+now we need to push the filse--means upload local repo to remote repo
+
+git push origin main
+
+
+
+to initilize git in new project
+
+mkdir foldername
+
+
+git  init
+git remote add origin <link>
+git remote -v(to verify remote)
+echo "# My Portfolio" >> README.md
+git add .
+git commit -m "Initial commit"
+git branch -M main     # Rename current branch to main (if needed)
+git push -u origin main
+
+
+
+to move from one branch to other
+git checkout -b<new branch name>
+
+git branch -d  <banch name to delete branch>
+
+git merge<branch name> merges 2 branches
+
+
