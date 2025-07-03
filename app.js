@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   crypto: {
-    secret: SECRET,
+    secret: process.env.SECRET,
   },
   touchAfter: 24 * 3600, //used to make session availabe for long time so that user need not to login again and again
 });
