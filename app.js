@@ -46,7 +46,7 @@ async function main() {
 }
 
 app.get("/", (req, res) => {
-  res.send("hi,I am root");
+  res.redirect("/listing");
 });
 
 const store = MongoStore.create({
